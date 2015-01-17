@@ -35,6 +35,18 @@
 	position:fixed;
 	width:100%;
 }
+#navleft {
+  border-left: 50px;
+}
+.media-heading {
+  color:white;
+  position:absolute;
+  padding-top: 30px
+}
+.img-thumbnail {
+  height: 100%;
+  clip:10px;
+}
 </style>
 </head>
 
@@ -58,9 +70,9 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">        
-      <li class="active"><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
-        <li><a href="passavinti-products.html">Products</a></li>
+      <ul class="nav navbar-nav">
+        <li id="navleft" class="active"><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
+        <li id="nevleft"><a href="passavinti-products.html">Products</a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -88,10 +100,33 @@
         <div id="body">
             <div class="bodyInner">
                 <div id="content">
-                    <div class="inner"> 
-                                      <a href="#NONE"><img src="images/brandscroll.gif"></a>
-          <img src="images/brandinfo.gif">
-                    </div>
+                <div class="inner">
+<div class="row"> 
+<div class="col-md-2">
+<div class="media">
+  <a class="media-left media-middle" href="#">
+    <span>
+    <h4 class="media-heading">Middle aligned media</h4>
+    <img class="img-thumbnail" id="media-row" src="images/cathedral.jpg" alt="...">
+    </span>
+    
+  </a>
+</div> 
+</div>
+<div class="col-md-2">
+<div class="media">
+  <a class="media-left media-middle" href="#">
+    <span>
+    <h4 class="media-heading">Middle aligned media</h4>
+    <img class="img-thumbnail" id="media-row" src="images/carpri.jpg" alt="...";>
+    </span>
+  </a>  
+</div>
+</div> 
+
+</div>
+              
+</div><!--row end -->
                 </div><!-- content close -->
          
                 <div id="sidebar">
