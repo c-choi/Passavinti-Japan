@@ -24,46 +24,65 @@
      text-align: Center;
 }
 #copyright {
-	color:black;
+	color:white;
 	font-size: 0.9em;
 	font-family:Lucida Grande,Arial,Helvetica,sans-serif;
 }
-body {background-image: url(images/armonia.jpg);
+.jumbotron {background-image: url(images/armonia.jpg);
 background-repeat: no-repeat;
-background-size: 100%;
-background-position: center}
-</style>
+background-color:1E1E1E;
+background-size: 1300px;
+background-position: center;
+margin-top:50px;
+margin-bottom:0px;
+height: 70%;
+border-radius: 30;
+}
+.breadcrumb {background-color:1E1E1E;}
+</style> 
 </head>
 
-<body>
+<body style="background-color:1E1E1E;">
+
+<div class="jumbotron" onclick="window.open('Passavinti.html')" value="window.moveto('Passavini.html')">
 <div class="container" style="margin:0px">
+<div class="brand-logo">
+                <img src="images/passavinti-header-white.png" style="margin-top:8px; width:300px; position:absolute">
+	            
+</div><!-- brand-logo close -->
     <div id="containerInner">
         <div id="header">
             <div class="inner">
             	<div class="container-fluid"> 
-                <img src="images/passavinti-header.png" style="margin-top:20px; width:30%">
-            </div>
-            </div>
-        </div><!-- header close -->
-     
+               
 
-            </div>
-        </div><!-- body close -->
-     
-        <div id="footer">
-			<ol class="breadcrumb">
-			  <li><a href="#">Home</a></li>
-			  <li><a href="#">Library</a></li>
-			  <li class="active">Data</li>
-			</ol>
-            <div class="container-fluid" style="text-align:right margin-bottom:0px"> 
-                <img src="images/firenze-1970.png" style="width:8%"><br />
-                <a id="Copyright">Copyright （ｃ）　 WISE DESIGN All Rights Reserved.<a>
-            </div>
+            	</div>
+            </div><!-- inner close -->
+        </div><!-- header close -->
+     </div><!-- containerInner close -->
+
+</div><!-- container close -->
+        
+</div>  <!-- jumbotron close -->   
+    <div id="footer">
+		<ol class="breadcrumb">
+     	  <li><a href="Passavinti.html" style="color:lightgrey">Home</a></li>
+		  <li><a href="#"style="color:lightgrey">Library</a></li>
+		  <li class="active">Data</li>
+			<li style="text-align: right;">	
+				<a style="color:white">Contact</a>
+				<button type="button" class="btn-btn-default" aria-label="Mail" herf="mailto:c-choi@wise-ltd.net">
+          			<span class="glyphicon glyphicon-envelope" aria-hidden="true" style="text-align:center"></span>
+          		</button>
+          	</li>
+		</ol>
+        <div class="container-fluid" style="text-align:right; vertical-align:text-bottom"> 
+          <img src="images/firenze-1970-white.png" style="width:80px"><br />
+          <address id="Copyright">Copyright （ｃ）<strong>WISE DESIGN</strong> All Rights Reserved.</address>
+                     
         </div> <!-- footer close -->
-    </div> 
-     
-</div> <!-- container close -->
+ 
+</div><!-- body close -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
