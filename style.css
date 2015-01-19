@@ -66,8 +66,8 @@ opacity:0.5;
   .img-responsive {
     max-width: 140%;
     height: 130px;
-    padding:5px;
-    
+    position:relative; 
+
   }
   .media {
     margin-left:20px;
@@ -95,4 +95,18 @@ br {
   max-height:140px;
   width:auto;
   height:100%;
+  padding:0px;
+  border:0px;
 }
+#interactive-products:hover {
+    -webkit-transition-duration:0.1s;
+    transition-duration: 0.1s;
+    opacity:0.5;
+    
+}
+.table-responsive {
+  position:relative;
+  overflow:hidden;
+}
+.media-heading {
+    border-radius:20;
