@@ -32,8 +32,8 @@ background-repeat: no-repeat;
 background-color:1E1E1E;
 background-size: 1400px;
 background-position: center;
-margin-top:8%;
-padding-top:3%;
+margin-top:6%;
+padding-top:2%;
 margin-bottom:5px;
 height: 70%;
 border-radius: 30;
@@ -44,8 +44,8 @@ background-repeat: no-repeat;
 background-color:1E1E1E;
 background-size: 1500px;
 background-position: center;
-margin-top:8%;
-padding-top:3%;
+margin-top:6%;
+padding-top:2%;
 margin-bottom:5px;
 height: 70%;
 border-radius: 30;
@@ -110,3 +110,7 @@ br {
 }
 .media-heading {
     border-radius:20;
+}
+#Firenze {
+  width:100px;
+}
