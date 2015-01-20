@@ -152,3 +152,6 @@ br {
   width:100%;
   min-height: 90%;
 }
+#body {
+  padding-bottom:70px;
+}
