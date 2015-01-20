@@ -1,6 +1,8 @@
 #footer {
      text-align: Center;
      width:100%;
+     margin-top:3px;
+     margin-bottom: 3px;
 }
 #copyright {
 	color:black;
@@ -13,7 +15,10 @@
   font-family:Lucida Grande,Arial,Helvetica,sans-serif;
 }
 
-.breadcrumb {background-color:1E1E1E;}
+.breadcrumb {
+  background-color:1E1E1E;
+  margin-bottom: 3px;
+}
 #header-menu {
 	margin-top:0px;
 	position:fixed;
@@ -25,7 +30,14 @@
 li style{
 	text-align: right;
 }
-
+.well {
+  text-align: left;
+  color:4C4C4C;
+  margin-top:20px;
+  width:100%;
+  font-family:Lucida Grande,Arial,Helvetica,sans-serif
+  font-size: 0.9em;
+}
 .jumbotron {
 background-image: url(images/armonia.jpg);
 background-repeat: no-repeat;
@@ -60,14 +72,8 @@ opacity:0.5;
     font-style: bold;
     font-size :16px;
     padding-top: 20px;
-    margin-right: 20px;
+    margin-right: 10px;
     overflow:hidden;
-  }
-  .img-responsive {
-    max-width: 140%;
-    height: 130px;
-    position:relative; 
-
   }
   .media {
     margin-left:20px;
@@ -98,19 +104,45 @@ br {
   padding:0px;
   border:0px;
 }
-#interactive-products:hover {
-    -webkit-transition-duration:0.1s;
-    transition-duration: 0.1s;
-    opacity:0.5;
-    
-}
-.table-responsive {
-  position:relative;
-  overflow:hidden;
-}
 .media-heading {
     border-radius:20;
 }
 #Firenze {
   width:100px;
+}
+#media-row:hover {
+  .img-display=this.src
+}
+#header-menu {
+  z-index: 10;
+}
+#key-img {
+  max-width: 100%;
+}
+#gallery-pics {
+  width:90%;
+  height:90%;
+  opacity:0.9;
+  border-radius: 20;
+  overflow: hidden;
+
+}
+#gallery-pics:hover {
+    width:100%;
+    -webkit-transition-duration:0.1s;
+    transition-duration: 0.1s;
+    opacity:1;
+}
+#gallery-pics: {
+  width:200px;
+}
+#gallery-table {
+  width: 100%;
+}
+#table-border {
+  height:40%;
+  overflow:hidden;
+  margin:10px;
+  border-style:hidden;
+  padding:0px;
 }
