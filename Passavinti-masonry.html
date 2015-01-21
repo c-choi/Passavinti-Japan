@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link href="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js"
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -21,7 +22,33 @@
 $('img-responsive').hover((function(){
   $('key-img').src=$('img-responsive')
 })();)
+
+
+//images loaded
+var imgLoad = imagesLoaded('#container');
+imgLoad.on( 'always', function() {
+  console.log( imgLoad.images.length + ' images loaded' );
+  // detect which image is broken
+  for ( var i = 0, len = imgLoad.images.length; i < len; i++ ) {
+    var image = imgLoad.images[i];
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  }
+});
+$('#container').imagesLoaded( function() {
+  // images have loaded
+});
+//masonry
+var msnry = $container.data('masonry');
+var $container = $('#container');
+// initialize
+$container.masonry({
+  columnWidth: 200,
+  itemSelector: '.item'
+});
 </script> 
+
+
 <style type="text/css" media="screen"></style>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -47,8 +74,8 @@ $('img-responsive').hover((function(){
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
-            <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Men <span class="caret"></span></a>
+    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
            <li><a href="passavinti-products.html">Products</a></li>
             <li><a href="passavinti-silver.html">Silver</a></li>
@@ -76,35 +103,97 @@ $('img-responsive').hover((function(){
   </nav>       
  </div><!-- menu close -->
  </header><!-- /header -->
-<div class="container">
-    <div id="containerInner" style="margin-top: 80px;">    
+<div class="container-fluid">
+    <div id="containerInner" style="margin-top:80px; position:relative; ">    
        
-        <div id="body">
-            <div class="bodyInner">
-                <div id="content" >
-                    <div class="inner" style="text-align:center">
-                <div class="container-fluid" id="pic-container">
-               <table id="gallery-table" class="table-striped">
-                <tr>
-                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
-                  <img id="gallery-pics" src="images/firenze.jpg" class="img-responsive" alt="responsive image">
-                                  </div><!--table-responsive-->
-                </tr>             
-                <tr>
-                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
-                  <img id="gallery-pics" src="images/tartan-men.jpg" class="img-responsive" alt="responsive image">
-                                  </div><!--table-responsive-->
-                </tr>
+               <div id="container" class="js-masonry"
+  data-masonry-options='{ "columnWidth": 200, "itemSelector": ".item" }'>
+                
+                <div class="item" >
+                  <img src="images/cathedral.jpg">           
+                </div><!--item close-->
+
+                <div class="item w2" >
+                  <img src="images/daisy.jpg">
+                                  </div><!--item close-->
+                
+                <div class="item w5" >
+                  <img src="images/galaxy.jpg">
+                                  </div><!--item close-->
+                
+                <div class="item w2" >
+                  <img src="images/infinito.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w3" >
+                  <img src="images/luxury.jpg">           
+                </div><!--item close-->
+                
+                <div class="item" >
+                  <img src="images/riflessi.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w2" >
+                  <img src="images/romantica.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w4" >
+                  <img src="images/prestige.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w3" >
+                  <img src="images/arazzo.jpg">           
+                </div><!--item close-->
+                
                
-                   </table>
+                <div class="item" >
+                  <img src="images/armonia.jpg">
+                                  </div><!--item close-->
+                      
+                <div class="item w5" >
+                  <img src="images/elementi.jpg">
+                                  </div><!--item close-->
+                
+                <div class="item" >
+                  <img src="images/forme.jpg">
+                 </div><!--item close-->
+                
+                <div class="item w2" >
+                  <img src="images/movimenti.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w4" >
+                  <img src="images/trame.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w2" >
+                  <img src="images/mosaici.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w3" >
+                  <img src="images/tartan.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w2" >
+                  <img src="images/Capri.jpg">           
+                </div><!--item close-->
+                
+                <div class="item w4" >
+                  <img src="images/arazzo.jpg">           
+                </div><!--item close-->
 
-                </div><!--container-fluid close-->
-                    </div><!--inner close-->
-                </div><!-- content close -->
-         
+                <div class="item w5" >
+                  <img src="images/firenze.jpg">
+                                  </div><!--item close-->
+                      
+                <div class="item w2" >
+                  <img src="images/tartan-men.jpg">
+                                  </div><!--item close-->
+                
+               
+                </div> <!--container -->
 
-            </div><!-- bodyinner close -->
-        </div><!-- body close -->
+
     </div> <!-- containerInner close -->
     </div><!-- container close -->
 
@@ -113,8 +202,7 @@ $('img-responsive').hover((function(){
       
         <li><a href="passavinti.html">Home</a></li>
       <li><a href="passavinti-aboutus.html">Brand</a></li>
-       <li><a href="passavinti-products.html">Products</a></li>
-      <li class="active">Men</li>
+      <li class="active">Products</li>
         <li><button type="button" class="btn-btn-default" aria-label="Mail" herf="mailto:c-choi@wise-ltd.net">
             <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="text-align:center"></span>
             </button></li>
@@ -130,6 +218,8 @@ $('img-responsive').hover((function(){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.1-dist/dist/js/bootstrap.min.js"></script>
-    <script src="style.css">
+    <script src="style.css"></script>
+    <script src="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js"></script>
+    <script src="bootstrap-3.3.1-dist/dist/js/imagesloaded.pkgd.min.js"></script>
 </body>
 </html>
