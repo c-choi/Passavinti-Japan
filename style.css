@@ -92,7 +92,6 @@ div {
     transition-delay: 0.03s;
     -webkit-transition-duration:0.1s;
     transition-duration: 0.1s;
-
 }
 br {
   font-size: 10px;
@@ -134,10 +133,21 @@ br {
     width:100%;
     -webkit-transition-duration:0.1s;
     transition-duration: 0.1s;
-    opacity:0.6;
+    opacity:0.9;
     z-index: 1;
 }
+#color-brick {
+  opacity:0.7;
+  min-height:5%;
+  height: auto;
 
+}
+#color-brick:hover {
+    -webkit-transition-duration:0.1s;
+    transition-duration: 0.1s;
+    opacity:0.9;
+    z-index: 1;
+}
 #gallery-table {
   width: 100%;
   display:block;
@@ -151,7 +161,6 @@ br {
   max-width:80%;
   padding-bottom:10px;
   overflow:hidden;
-  
   border-style:hidden;
 }
 
@@ -162,49 +171,61 @@ br {
 
 }
 .item>img{ width: 100%;
-            margin:0px;
-            padding:0px;
+            margin:0%;
+            padding:0%;
 }
 .item.w2>img { width: 100%;
-            margin:0px;
-            padding:0px;
+            margin:0%;
+            padding:0%;
 }
 .item.w3>img {width: 100%;
-            margin:0px;
-            padding:0px;
+            margin:0%;
+            padding:0%;
 }
 .item.w4>img {width: 100%;
-            margin:0px;
-            padding:0px;
-}                
+            margin:0%;
+            padding:0%;
+}         
 
 .item {
-  width:32%;
+  width:30%;
   margin:5px;
-  text-align: left;
   }
 .item.w2{
-  width:16%;
+  width:15%;
   margin:5px;
-  text-align: left;
   }
 .item.w3{
-  width:32%; 
+  width:30%; 
   margin:5px;
-  text-align: left; 
   }
 .item.w4{
-  width:16%; 
+  width:15%; 
   margin:5px;
-  text-align: left; 
-  background-color: black;
   }
-
-
-
+.item.w5{
+  width:15%; 
+}
 .item:hover {
     -webkit-transition-duration:0.1s;
     transition-duration: 0.1s;
     opacity:0.6;
     z-index: 1;
+}
+.item {position:absolute;
+  margin:1px;}
+
+#animate-item-size-responsive .item-content {
+  width:  15%;
+  height: auto;
+  background: #09D;
+  -webkit-transition: width 0.4s, height 0.4s;
+     -moz-transition: width 0.4s, height 0.4s;
+       -o-transition: width 0.4s, height 0.4s;
+          transition: width 0.4s, height 0.4s;
+}
+.animate-item-size-demo .item-content {
+  background: #09D;
+  transition: width 0.4s, height 0.4s;
+  /* -webkit-transition -moz, etc, too */
 }

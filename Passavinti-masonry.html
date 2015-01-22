@@ -10,7 +10,7 @@
     <!-- Bootstrap -->
     <link href="bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
-    <link href="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js"
+    <link href="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -18,29 +18,27 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<script type="text/javascript">
-$('img-responsive').hover((function(){
-  $('key-img').src=$('img-responsive')
-})();)
-
-
-//images loaded
-var imgLoad = imagesLoaded('#container');
-imgLoad.on( 'always', function() {
-  console.log( imgLoad.images.length + ' images loaded' );
-  // detect which image is broken
-  for ( var i = 0, len = imgLoad.images.length; i < len; i++ ) {
-    var image = imgLoad.images[i];
-    var result = image.isLoaded ? 'loaded' : 'broken';
-    console.log( 'image is ' + result + ' for ' + image.img.src );
-  }
-});
-$('#container').imagesLoaded( function() {
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+$('#masonry-container').imagesLoaded( function() {
   // images have loaded
 });
+$('#masonry-container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
 //masonry
 var msnry = $container.data('masonry');
-var $container = $('#container');
+var $container = $('#masonry-container');
 // initialize
 $container.masonry({
   columnWidth: 300,
@@ -73,11 +71,12 @@ $container.masonry({
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
-    <li class="dropdown">
+         <li ><a href="passavinti.html">Home <span class="sr-only">(current)</span></a></li>
+        <li ><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
+    <li class="dropdown active">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-           <li><a href="passavinti-products.html">Products</a></li>
+           <li><a href="passavinti-masonry.html">Products</a></li>
             <li><a href="passavinti-silver.html">Silver</a></li>
             <li><a href="Passavinti-bronze.html">Bronze</a></li>
             <li class="divider"></li>
@@ -103,25 +102,31 @@ $container.masonry({
   </nav>       
  </div><!-- menu close -->
  </header><!-- /header -->
-<div class="container" style="margin-top: 70px">
+<div class="container-fluid" style="margin-top: 70px">
 
        
                <div id="masonry-container" class="js-masonry"
-  style="position:relative; width:100%; margin:10px, padding:0px;">
+  style="width:100%; margin:3px, padding:0px;">
                 
                 <div class="item masonry-brick ">
                    <img src="images/cathedral.jpg">           
                 </div><!--item close-->
- <div class="item w4 masonry-brick" style="height:100; background-color:yellow;" ></div>
-                <div class="item w4 masonry-brick " >
+
+             <div class="item w4 masonry-brick " >
                   <img src="images/daisy.jpg">
                                   </div><!--item close-->
-                <div class="item w4 masonry-brick" style="height:100; background-color:magenta;" ></div>
-                
+
+              <div class="item-content" id="color-brick" style="background-color:green">
+                       </div><!--item close-->
+                           
                 <div class="item w3 masonry-brick " >
                   <img src="images/galaxy.jpg">
                                   </div><!--item close-->
-                
+
+                <div class="item-content" id="color-brick" style="background-color:hotpink" >
+                       </div><!--item close-->
+                          
+
                 <div class="item masonry-brick " >
                   <img src="images/infinito.jpg">           
                 </div><!--item close-->
@@ -133,12 +138,15 @@ $container.masonry({
                 <div class="item w3 masonry-brick ">
                    <img src="images/riflessi.jpg">           
                 </div><!--item close-->
-                <div class="item w4 masonry-brick" style="height:100; background-color:red;" ></div>
+                <div class="item w5 masonry-brick" class="item-content" id="color-brick" style="background-color:red" >
+                       </div><!--item close-->
+                
                 <div class="item w4 masonry-brick " >
                   <img src="images/romantica.jpg">           
                 </div><!--item close-->
-                 <div class="item w4 masonry-brick" style="height:100; background-color:lightblue;" ></div>
-                               
+                <div class="item w5 masonry-brick" class="item-content" id="color-brick" style="background-color:blue" >
+                </div><!--item close-->
+                                              
                 <div class="item masonry-brick " >
                   <img src="images/prestige.jpg">           
                 </div><!--item close-->
@@ -147,53 +155,62 @@ $container.masonry({
                   <img src="images/arazzo.jpg">           
                 </div><!--item close-->
                 
-                 <div class="item w4 masonry-brick" style="height:100; background-color:deepred;" ></div>
-                <div class="item w4 masonry-brick ">
+<div class="item-content" id="color-brick" style="background-color:Blue">
+     </div><!--item close-->
+                
+                  <div class="item w4 masonry-brick ">
                    <img src="images/armonia.jpg">
                                   </div><!--item close-->
-                                      <div class="item w4 masonry-brick" style="height:100; background-color:red;" ></div>
-                <div class="item masonry-brick " >
+                  <div class="item w5 masonry-brick" class="item-content" id="color-brick" style="background-color:fuchsia">
+                       </div><!--item close-->
+                  
+                                              <div class="item masonry-brick " >
                   <img src="images/elementi.jpg">
                                   </div><!--item close-->
                 
                 <div class="item w4 masonry-brick ">
                    <img src="images/forme.jpg">
                  </div><!--item close-->
-                                <div class="item w4 masonry-brick" style="height:100; background-color:maroon;" ></div>
-                <div class="item w2 masonry-brick " >
+                                 <div class="item w5 masonry-brick" class="item-content" id="color-brick" style="background-color:darkorchid">
+     </div><!--item close-->
+                                           <div class="item w2 masonry-brick " >
                   <img src="images/movimenti.jpg">           
                 </div><!--item close-->
                 
                 <div class="item masonry-brick " >
                   <img src="images/trame.jpg">           
                 </div><!--item close-->
-                <div class="item w4 masonry-brick" style="height:100; background-color:red;" ></div>
-                <div class="item w4 masonry-brick " >
+                        <div class="item w4 masonry-brick " >
                   <img src="images/mosaici.jpg">           
                 </div><!--item close-->
-                                <div class="item w4 masonry-brick" style="height:100; background-color:pink;" ></div>
-                <div class="item w3 masonry-brick " >
+                <div class="item w5 masonry-brick" class="item-content" id="color-brick" style="background-color:lime" >      
+     </div><!--item close-->
+                                         <div class="item w3 masonry-brick " >
                   <img src="images/tartan.jpg">           
                 </div><!--item close-->
-                
+                <div class="item-content" id="color-brick" style="background-color:Chocolate">
+                       </div><!--item close-->
+                          
+
                 <div class="item w2 masonry-brick " >
                   <img src="images/Capri.jpg">           
                 </div><!--item close-->
-                 <div class="item w4 masonry-brick" style="height:100; background-color:;" ></div>
-               
+                     
                 <div class="item w4 masonry-brick " >
                   <img src="images/arazzo.jpg">           
                 </div><!--item close-->
-                <div class="item w4 masonry-brick" style="height:100; background-color:green;" ></div>
-                <div class="item w3 masonry-brick " >
+                          <div class="item w3 masonry-brick " >
                   <img src="images/firenze.jpg">
                                   </div><!--item close-->
-                      <div class="item w4 masonry-brick" style="height:100; background-color:blue;" ></div>
-                <div class="item w4 masonry-brick " >
+                          <div class="item-content" id="color-brick" style="background-color:pink">
+                       </div><!--item close-->
+        
+                               <div class="item w4 masonry-brick " >
                   <img src="images/tartan-men.jpg">
                                   </div><!--item close-->
-                                <div class="item w4 masonry-brick" style="height:100; background-color:;" ></div>
-               
+                                    
+              <div class="item w5 masonry-brick" class="item-content" id="color-brick" style="background-color:SpringGreen" >
+                       </div><!--item close-->                                    
                 </div> <!--container -->
 
 
@@ -220,7 +237,6 @@ $container.masonry({
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.3.1-dist/dist/js/bootstrap.min.js"></script>
-    <script src="style.css"></script>
     <script src="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js"></script>
     <script src="bootstrap-3.3.1-dist/dist/js/imagesloaded.pkgd.min.js"></script>
 </body>
