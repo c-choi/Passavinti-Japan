@@ -139,7 +139,7 @@ br {
     position:relative;
 }
 #color-brick {
-  opacity:0.4;
+  opacity:0.3;
   min-width:14%;
   max-width: 30%;
   width:auto;
@@ -154,7 +154,7 @@ br {
 #color-brick:hover {
     -webkit-transition-duration:0.1s;
     transition-duration: 0.1s;
-    opacity:0.9;
+    opacity:0.6;
     z-index: 1;
 }
 #gallery-table {
