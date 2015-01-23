@@ -140,18 +140,19 @@ br {
 }
 #color-brick {
   opacity:0.3;
-  min-width:14%;
-  max-width: 30%;
-  width:auto;
-  min-height:2%;
-  height:auto;
-  border-spacing: 3px;
-  margin-left:2px;
-  margin-bottom:3px;
-  margin-top:2px;
+  width:13%;
+  height:0.4%;
   border-radius: 3;
+  margin:3px;
 }
-#color-brick:hover {
+#color-brickH {
+  opacity:0.3;
+  width:17%;
+  height:0.6%;
+  border-radius: 3;
+  margin:3px;
+}
+#color-brick:hover, #color-brickh:hover{
     -webkit-transition-duration:0.1s;
     transition-duration: 0.1s;
     opacity:0.6;
@@ -181,35 +182,60 @@ br {
 }
 .item>img{ width: 100%;
             margin:1px;
-            padding:0%;
+            padding:0%;  
+            border-radius: 3;
+            position:relative;
+}
+.item.w1>img{ width: 100%;
+            margin:1px;
+            padding:0%;  
+            border-radius: 3;
+            position:relative;
 }
 .item.w2>img { width: 100%;
             margin:1px;
             padding:0%;
+              border-radius: 3;
+            position:relative;
 }
 .item.w3>img {width: 100%;
             margin:1px;
-            padding:0%;
+            padding:0%; 
+              border-radius: 3;
+            position:relative;
 }
 .item.w4>img {width: 100%;
             margin:1px;
             padding:0%;
+              border-radius: 3;
+            position:relative;
 }         
+.item.w5>img {width: 100%;
+            margin:1px;
+            padding:0%;
+              border-radius: 3;
+            position:relative;
+}
 
 .item {
-  width:28%;
+  width:30%;
+  border-radius: 3;
    }
 .item.w2{
-  width:14%;
+  width:18%;
+  border-radius: 3;
    }
 .item.w3{
-  width:28%; 
+  width:24%; 
+  border-radius: 3;
    }
 .item.w4{
-  width:14%; 
+  width:15%; 
+  border-radius: 3;
    }
 .item.w5{
-  width:14%; 
+  width:12%; 
+   border-radius: 3;
  }
 .item:hover {
     -webkit-transition-duration:0.1s;
@@ -217,10 +243,12 @@ br {
     opacity:0.6;
     z-index: 1;
 }
-.item {position:relative;
-  margin:1px;}
+.item {
+  position:relative;
+  margin:2px;
+  border-radius: 3}
 
-#animate-item-size-responsive .item-content {
+#animate-item-size-responsive .item {
   width:  15%;
   height: auto;
   background: #09D;
@@ -229,8 +257,13 @@ br {
        -o-transition: width 0.4s, height 0.4s;
           transition: width 0.4s, height 0.4s;
 }
-.animate-item-size-demo .item-content {
+.animate-item-size-demo .item {
   background: #09D;
   transition: width 0.4s, height 0.4s;
   /* -webkit-transition -moz, etc, too */
 }
+
+  border-spacing: 3px;
+  margin-left:2px;
+  margin-bottom:3px;
+  margin-top:2px;
