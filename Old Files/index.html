@@ -18,18 +18,20 @@
     <![endif]-->
 
 <script type="text/javascript">
+$('img-responsive').hover((function(){
+  $('key-img').src=$('img-responsive')
+})();)
+}
 </script> 
 <style type="text/css" media="screen"></style>
 <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-
 <body>
-<header id="header-menu">
-  
 
+<header id="header-menu">
 <div id="menu">
-  <nav class="navbar navbar-inverse">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -40,18 +42,17 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="passavinti-jp.html"><img src="images/passavinti-header-white.png" style="height:100%"></a>
-    </div>
+    </div><!--navbar-header close-->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-           <li ><a href="passavinti.html">Home <span class="sr-only">(current)</span></a></li>
+         <li ><a href="passavinti.html">Home <span class="sr-only">(current)</span></a></li>
         <li ><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
             <li class="dropdown active">
-        <li><a href="passavinti-products.html">Products</a></li>
-       <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Silver <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
+           <li><a href="passavinti-masonry.html">Products</a></li>
             <li><a href="passavinti-silver.html">Silver</a></li>
             <li><a href="Passavinti-bronze.html">Bronze</a></li>
             <li class="divider"></li>
@@ -69,8 +70,6 @@
             <li class="divider"></li>
             <li><a href="http://www.passavinti.co.kr/index.html">Passavinti Korea</a></li>
             <li><a href="passavinti-jp.html">Passavinti Japan</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
           </ul>
         </li>
       </ul>
@@ -80,21 +79,66 @@
  </div><!-- menu close -->
  </header><!-- /header -->
 <div class="container">
-    <div id="containerInner" style="margin-top: 80px">    
+    <div id="containerInner" style="margin-top: 80px;">    
        
         <div id="body">
             <div class="bodyInner">
-                <div id="content">
-                    <div class="inner"> 
+                <div id="content" >
+                    <div class="inner" style="text-align:center">
+                <div class="container-fluid" id="pic-container">
+               <table id="gallery-table" class="table-striped">
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                <img id="gallery-pics" src="images/cathedral.jpg" class="img-responsive" alt="responsive image">
+                                  </div><!--table-responsive-->
+                </tr>             
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/daisy.jpg" class="img-responsive" alt="responsive image">
+                                  </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/galaxy.jpg" class="img-responsive" alt="responsive image">
+                                  </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/infinito.jpg" class="img-responsive" alt="responsive image">           
+                </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/luxury.jpg" class="img-responsive" alt="responsive image">           
+                </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/riflessi.jpg" class="img-responsive" alt="responsive image">           
+                </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/romantica.jpg" class="img-responsive" alt="responsive image">           
+                </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/prestige.jpg" class="img-responsive" alt="responsive image">           
+                </div><!--table-responsive-->
+                </tr>
+                <tr>
+                <div id="table-border" class="table-responsive col-xs-12 col-sm-5 col-md-3 col-lg-3" >
+                  <img id="gallery-pics" src="images/arazzo.jpg" class="img-responsive" alt="responsive image">           
+                </div><!--table-responsive-->
+                </tr>
+                   </table>
 
-              
-                    </div>
+                </div><!--container-fluid close-->
+                    </div><!--inner close-->
                 </div><!-- content close -->
          
-                <div id="sidebar">
-                    <div class="inner"> 
-                    </div>
-                </div><!-- sidebar close -->
+
             </div><!-- bodyinner close -->
         </div><!-- body close -->
     </div> <!-- containerInner close -->
@@ -102,9 +146,11 @@
 
       <div id="footer">
     <ol class="breadcrumb">
-      <li class="active">Home</li>
-        <li><a href="passavinti-aboutus.html">Brand</a></li>
-      <li><a href="passavinti-products.html">Products</a></li>
+      
+        <li><a href="passavinti.html">Home</a></li>
+      <li><a href="passavinti-aboutus.html">Brand</a></li>
+       <li><a href="passavinti-masonry.html">Products</a></li>
+      <li class="active">Sliver</li>
         <li><button type="button" class="btn-btn-default" aria-label="Mail" herf="mailto:c-choi@wise-ltd.net">
             <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="text-align:center"></span>
             </button></li>
