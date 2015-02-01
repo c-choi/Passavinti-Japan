@@ -1,6 +1,11 @@
 .nav>li {position:relative;
 display: list-item;}
 
+ul.nav li.dropdown:hover > ul.dropdown-menu{
+    display: block;
+    margin: 0;
+}
+
 .nav {
   list-style-position: outside;
   list-style-type: none;
