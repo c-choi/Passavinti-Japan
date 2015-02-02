@@ -1,11 +1,7 @@
 .nav>li {position:relative;
 display: list-item;}
 
-ul.nav li.dropdown:hover > ul.dropdown-menu {
-    display: block;
-    margin: 0;
-    transition: 0.6s;
-}
+
 li.dropdown ul li ul {
   visibility: hidden;
   position:absolute;
