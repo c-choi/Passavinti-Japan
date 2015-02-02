@@ -1,19 +1,16 @@
 .nav>li {position:relative;
 display: list-item;}
 
-ul.nav li.dropdown:hover > ul.dropdown-menu{
+ul.nav li.dropdown:hover > ul.dropdown-menu {
     display: block;
     margin: 0;
+    transition: 0.6s;
+}
+li.dropdown ul li ul {
+  visibility: hidden;
+  position:absolute;
 }
 
-.nav {
-  list-style-position: outside;
-  list-style-type: none;
-  list-style: none;
-}
-.nav>li>a {
-  display: block;
-}
 #footer {
      text-align: Center;
      width:100%;
