@@ -40,6 +40,25 @@ $('img-responsive').hover((function(){
     }
 }
 </script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+$('#container').imagesLoaded( function() {
+  // images have loaded
+});
+$('#container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
+</script>
 <style type="text/css" media="screen"></style>
 <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
@@ -58,7 +77,7 @@ $('img-responsive').hover((function(){
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../passavinti-jp.html"><img src="../images/passavinti-header-white.png" style="height:100%"></a>
+      <a class="navbar-brand" href="../passavinti.html"><img src="../images/passavinti-header-white.png" style="height:100%"></a>
     </div><!--navbar-header close-->
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -165,7 +184,7 @@ $('img-responsive').hover((function(){
          
     </div> <!-- containerInner close -->
     <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12" style="margin-top:20px">
- <center><a href="../#top"><button type="button" class="btn btn-default"><strong style="color: black;">Top</strong></button></a></center>
+ <center><a href="#top"><button type="button" class="btn btn-default"><strong style="color: black;">Top</strong></button></a></center>
     </div>
     </div><!-- container close -->
    
