@@ -1,0 +1,288 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  width:100%;
+}
+body {
+  text-align: center;
+  position:relative;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: auto;
+ /* For at least Firefox */
+  -webkit-box-shadow: inset 0 0 10 rgba(0,0,0,.5);
+          box-shadow: inset 0 0 10 rgba(0,0,0,.5);
+  margin:0px;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+  position:relative !important;
+  text-align: right;
+  height: 100%;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* images */
+.bg {
+  width:100%;
+  height:auto;
+  height:800px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+  background-attachment: fixed;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+#bg01 {
+  background-image: url(img/model.jpg);
+}
+#bg02 {
+  background-image: url(img/model2.jpg);
+
+}
+#bg03 {
+  background-image: url(img/bn4.jpg);
+}
+#pgimg {
+  width:100%;
+  position: relative;
+  float: left;
+}
+.title {
+  float: left;
+  margin: 3%;
+  display: block;
+  position: relative;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+  text-align: right;
+  position: relative;
+}
+.form-group {
+  float: left;
+  position:relative;
+}
+
+/*
+ * Header
+ */
+
+.masthead {
+  z-index: 1;
+  position: fixed;
+  width: 100% !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.8);
+
+}
+.masthead-nav > li {
+  display: inline-block;
+}
+
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: green;
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: red;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+  .masthead {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+  text-align: left;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+.cover-heading {
+    color:grey;
+    text-shadow: 2px 4px 5px rgba(0,0,0,.3);
+}
+.lead {
+   color:silver;
+}
+.site-wrapper {
+  margin:0px;
+}
+#Contact {
+  height: 90%
+}
+.contact-form {
+  padding-bottom: 0px;
+  margin-top: 30px;
+}
+.link-btn>a {
+  width: 100%;
+  font-weight: bold;
+  float:center;
+  background-color: lightgrey;
+}
+.link-btn > a:hover,
+.link-btn > a:focus,
+#submit:hover,
+#submit:focus {
+  background-color: darkred;
+  color: white;
+}
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 100px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+    text-align: right;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+  .site-wrapper {
+    height: 30%;
+  }
+  .bg {
+    width:100%;
+  }
+}
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  .bg {
+    height:30%;
+    min-height: 800px;
+    margin-bottom: 1px;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+    .site-wrapper {
+    height: 60%;
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+  .bg {
+    height:30%;
+    min-height: 800px;
+    margin-bottom: 1px;
+  }
+  .site-wrapper {
+    height: 100%;
+  }
+}

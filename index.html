@@ -1,148 +1,305 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//Ja"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<?xml version="1.0" encoding="EUC-JP"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
 <head>
-<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/favicon.ico">
+
+
     <title>Passavinti Japan</title>
 
-    <!-- Bootstrap -->
-    <link href="bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+
+    <!-- Google Analytics -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59106832-3', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+    <script type="text/javascript" src="formmail/jquery.js"></script>
+<script type="text/javascript" src="formmail/jquery.form.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/holder.js"></script>
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="bootstrap-3.3.5-dist/js/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="bootstrap-3.3.5-dist/js/ie-emulation-modes-warning.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+    $('body').scrollspy({target: '#navbar-scroll'})
+    </script>
+    <script type="text/javascript">
+    $('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')})
+    </script>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
-$('#container').imagesLoaded( function() {
-  // images have loaded
-});
-$('#container').imagesLoaded()
-  .always( function( instance ) {
-    console.log('all images loaded');
-  })
-  .done( function( instance ) {
-    console.log('all images successfully loaded');
-  })
-  .fail( function() {
-    console.log('all images loaded, at least one is broken');
-  })
-  .progress( function( instance, image ) {
-    var result = image.isLoaded ? 'loaded' : 'broken';
-    console.log( 'image is ' + result + ' for ' + image.img.src );
-  });
-</script>
+    <script> 
+  function confirmEnctype(){
+ alert(document.getElementById("form").encoding);
+ document.getElementById("form").encoding= "multipart/form-data";f
+}  </script>
 
-<style type="text/css" media="screen"></style>
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-</head>
+  </head>
 
-<body>
+  <body data-spy="scroll" data-target="#navbar-scroll" data-offset="300">
+           <div class="masthead clearfix" id="Passavinti">
+            <div class="inner">
+              <div class="masthead-navbar"  id="navbar-scroll">
+                <ul class="nav masthead-nav" role="tablist">
+                  <li class="active"><a href="#Passavinti">Passavinti</a></li>
+                 <li><a href="#Brand">ブランド</a></li>
+                <li><a href="#Products">商品</a></li>  
+                 
+                 <!--   <li><a href="#componsable">Componsable</a></li>
+                     <li><a href="#componsable">Push In</a></li>
+                      <li><a href="#componsable">Jewels</a></li>
+                     -->
+                  <li><a href="#Contact">問い合わせ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-<header id="header-menu">
-	
-<div id="menu">
-	<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="images/passavinti-header-white.png" style="height:100%"></a>
+    <div class="container-fluid col-sm-12 col-lg-12 col-xs-12">
+              <img id="bg01" class="bg">
     </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
-        <li ><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
-    <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-           <li><a href="passavinti-masonry.html">Products</a></li>
-            <li><a href="products/silver.html">Silver</a></li>
-            <li><a href="products/bronze.html">Bronze</a></li>
-            <li class="divider"></li>
-            <li><a href="products/men.html">Men</a></li>
-          </ul>
-        </li>
-      </ul>
-      
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Global <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="http://www.passavinti.it">Passavinti Italy</a></li>
-            <li class="divider"></li>
-            <li><a href="http://www.passavinti.co.kr/index.html">Passavinti Korea</a></li>
-            <li><a href="index.html">Passavinti Japan</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-	</nav>       
- </div><!-- menu close -->
- </header><!-- /header -->
+    <div class="site-wrapper" id="Brand">
+      <div class="site-wrapper-inner">
+      <div class="title">
+      <blockquote>
+      <p><h2>ブランド Passavinti</h2></p>
+      </blockquote>
+      </div>
+          <img id="pgimg" src="img/brand1.jpg">
+          <img id="pgimg" src="img/brand2.jpg">
+          <img id="pgimg" src="img/brand3.jpg">
+          <img id="pgimg" src="img/brand4.jpg">
+          <img id="pgimg" src="img/brand5.jpg">
+      </div>
+    </div>
 
-<div class="container-fluid">
-    <div id="containerInner" style="margin-top: 80px">    
-       
-        <div id="body">
-            <div class="bodyInner">
-                <div id="content">
-                    <div class="inner"> 
-                    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-0">
-                    </div>
-    <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12">
-<div class="embed-responsive embed-responsive-4by3">
-           <meta itemprop="thumbnailUrl" content="http://www.passavinti.it/wp-content/uploads/2014/06/PASSAVINTI-15-SEC-H.264-for-Video-Podcasting_thumb1.jpg"><meta itemprop="embedUrl" content="http://www.passavinti.it/?attachment_id=2200&amp;kgvid_video_embed[enable]=true"><meta itemprop="contentUrl" content="http://www.passavinti.it/wp-content/uploads/2014/06/PASSAVINTI-15-SEC-H.264-for-Video-Podcasting.m4v"><meta itemprop="name" content="PASSAVINTI 15 SEC-H.264 for Video Podcasting"><div data-setup="{}" class="fitvidsignore video-js kg-video-js-skin vjs-controls-enabled vjs-has-started vjs-paused vjs-user-inactive" poster="http://www.passavinti.it/wp-content/uploads/2014/06/PASSAVINTI-15-SEC-H.264-for-Video-Podcasting_thumb1.jpg" preload="metadata" autoplay="true" id="video_2200"><video class="embed-responsive-item" id="video_2200_html5_api" autoplay="" preload="metadata" poster="http://www.passavinti.it/wp-content/uploads/2014/06/PASSAVINTI-15-SEC-H.264-for-Video-Podcasting_thumb1.jpg" class="vjs-tech" data-setup="{}">
-          <source src="http://www.passavinti.it/wp-content/uploads/2014/06/PASSAVINTI-15-SEC-H.264-for-Video-Podcasting.m4v" type="video/mp4">
-        </video></div>
+    <div class="site-wrapper" id="Products">
+      <div class="site-wrapper-inner">
+      <div class="title">
+      <blockquote>
+      <p><h2>商品</h2></p>
+      </blockquote>
+      </div>
+<table>
+<br>
+        <div class="cover-container" id="componsable">
+          <div class="inner cover">
+            <h2 class="cover-heading">Componsable</h2>
+            <p class="lead">・ Beads, Charms, Stoppers, Bases</p>
+          </div>
         </div>
-        
-    </div><!--col close-->
-      </div><!--inner close-->
+</br>
+<br>
+       <div class="container-fluid col-sm-12 col-lg-12 col-xs-12"><img id="pgimg" src="img/co.jpg"></div>
+</br>
+<br>        
+        <div class="cover-container" id="pushin">
+          <div class="inner cover">
+            <h2 class="cover-heading">Push In</h2>
+            <p class="lead">・ Chunks, Bases</p>
+          </div>
+        </div>
+</br>
+<br>
+       <div class="container-fluid col-sm-12 col-lg-12 col-xs-12"><img id="pgimg" src="img/pi.jpg"></div>
 
-     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-0">
-     </div>
-    </div> <!-- content close -->
-    </div><!-- bodyInner close -->
-                 </div><!-- body close -->
-    </div><!--container-inner-->
+</br>
+<br>
+        <div class="cover-container" id="jewels">
+          <div class="inner cover">
+            <h2 class="cover-heading">Jewels</h2>
+            <p class="lead">・ Military, Pirate</p>
+          </div>
+        </div>
 
-    </div><!--container-fluid-->
+       <div class="container-fluid col-sm-12 col-lg-12 col-xs-12"><img id="pgimg" src="img/pu.jpg"></div>
+</br>
+</table>
+      </div>
+    </div>
 
-      <div class="footer">
-		<ol class="breadcrumb">
-      <li class="active">Home</li>
-     	  <li><a href="passavinti-aboutus.html">Brand</a></li>
-		  <li><a href="passavinti-masonry.html">Products</a></li>
-				<li><button type="button" class="btn-btn-default" aria-label="Mail" herf="mailto:c-choi@wise-ltd.net">
-          	<span class="glyphicon glyphicon-envelope" aria-hidden="true" style="text-align:center"></span>
-          	</button></li>
-		</ol>
-      <div class="container-fluid" style="text-align:right; vertical-align:text-bottom; margin-right:5%;"> 
-          <img id="firenze" src="images/firenze-1970.png">
-        <address id="Copyright">Copyright （ｃ）<strong>Wise Design</strong>  All Rights Reserved.</address>
-            </div><!-- container-fluid close-->
-             </div> <!-- footer close -->
+    <div class="container-fluid col-sm-12 col-lg-12 col-xs-12">
+    <div id="bg02" class="bg">
+    </div></div>
 
-   
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap-3.3.1-dist/dist/js/bootstrap.min.js"></script>
-    <script src="style.css">
-</body>
+        <div class="site-wrapper" id="Contact">
+      <div class="site-wrapper-inner">
+      <div class="title">      
+      <blockquote>
+      <p><h2>問い合わせ</h2></p>
+      </blockquote>
+
+      <ul class="link-btn">
+              <a href="http://Passavinti.it" class="btn btn-md btn-default">Passavinti イタリア</a>
+              <br>
+              <a href="http://Passavinti.net
+              " class="btn btn-md btn-default">Passavinti 韓国</a>
+              </br>
+      </ul>
+      </div>
+
+        <div class="cover-container">
+          <div class="inner cover">              
+<br></br>
+<form id="form1" name="form1" class="contact-form" method="post">
+<div class="form-group col-xs-12 col-sm-12 col-mid-12
+">
+<input type="hidden" name="mode" value="send">
+</div>
+  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+    <label for="name"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 姓名 </label>
+    <input type="text" class="form-control" id="name" name="name" aria-required="true" placeholder="name">
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+    <label for="areaname"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> 地域 </label>
+    <input type="text" class="form-control" id="areaname" name="areaname" aria-required="true" placeholder="areaname">
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+    <label for="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> E-mail </label>
+    <input type="email" class="form-control" id="email" name="email" aria-required="true" placeholder="email">
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+    <label for="questype"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 問い合わせタイップ </label>
+<br>
+    <input type="radio" name="questype" class="radio-inline" id="questype" aria-required="true" placeholder="questype" value="Product"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 商品 
+
+  <input type="radio" name="questype" class="radio-inline" id="questype" aria-required="true" placeholder="questype" value="Store"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 店舗 
+
+  <input type="radio" name="questype" class="radio-inline" id="questype" aria-required="true" placeholder="questype" value="Others"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span> その他 
+</br>
+  </div>
+
+  <div class="form-group col-xs-12">
+  <label for="content"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 内容 </label>
+  <textarea id="content" name="content" class="form-control" rows="5" aria-required="true"></textarea>
+  </div>
+
+  <div class="form-group col-xs-12">
+    <label for="file"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 添付ファイル </label>
+    <input type="file" id="file1" name="userfile1" value="file1">
+    <input type="file" id="file2" name="userfile2" value="file2">
+    <input type="file" id="file3" name="userfile3" value="file3">
+  </div>
+
+<div class="form-group col-xs-12">
+<input type="button" id="submit" class="btn btn_default" value="Submit" onclick="form_Check();" style="cursor:hand;"> <span id="result"></span>
+
+  </div>
+
+</form>
+
+        </div>
+      </div>
+    </div>
+
+         <div class="mastfoot">
+
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+
+            
+          </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap-3.3.5-dist/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
+
+<script>
+$("#name").focus(function() {
+  $('#result').html("");
+  $('#submit').show();
+});
+
+function form_Check(){
+  if(form1.name.value == ''){
+    alert("Input Name");
+    form1.name.focus();
+    return;
+  }
+  if(form1.email.value == ''){
+    alert("Input E-mail");
+    form1.email.focus();
+    return;
+  }
+  if(form1.areaname.value == ''){
+    alert("Input Area");
+    form1.areaname.focus();
+    return;
+  }
+  if(form1.questype[0].checked == false && form1.questype[1].checked == false && form1.questype[2].checked == false){
+    alert("Input Question Type");
+    form1.questype[0].focus();
+    return;
+  }
+  if(form1.content.value == ''){
+    alert("Input Content");
+    form1.content.focus();
+    return;
+  }
+  if(!confirm('Send E-mail?')) return;
+  //form1.submit();
+
+  //Ajax Send Start
+  $('#submit').hide();
+  $('#result').html("<img src='formmail/indicator.gif' align='absmiddle'> <font color='blue'>Sending... Please Wait.</font>");
+  var form = $("form")[0];
+  var formData = new FormData(form);
+  $.ajax({
+    url: "formmail/form_send.php",
+    processData: false,
+    contentType: false,
+    data: formData,
+    type: "POST",
+    cache: false,
+    success: function(args) {
+      $('#result').html(args);
+      $('#form1').trigger("reset");
+      //$('#submit').show();
+    },
+    error: function(args) {
+      $('#result').html("<font color='red'>Failure</font>");
+      $('#form1').trigger("reset");
+      //$('#submit').show();
+    },
+  })
+  //Ajax Sent.
+}
+
+</script>
