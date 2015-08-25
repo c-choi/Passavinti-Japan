@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, target-densitydpi=device-dpi">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="img/favicon.ico">
@@ -44,120 +44,348 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-    $('body').scrollspy({target: '#navbar-scroll'})
-    </script>
-    <script type="text/javascript">
-    $('[data-spy="scroll"]').each(function () {
-  var $spy = $(this).scrollspy('refresh')})
-    </script>
+<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js">
+    $('body').scrollspy({target: '#navbar-scroll'});
 
-    <script> 
-  function confirmEnctype(){
- alert(document.getElementById("form").encoding);
- document.getElementById("form").encoding= "multipart/form-data";f
-}  </script>
+$('[data-spy="scroll"]').each(function () {
+  var $spy = $(this).scrollspy('refresh')
+})
+</script>
 
-  </head>
+<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js">
 
-  <body data-spy="scroll" data-target="#navbar-scroll" data-offset="300">
-           <div class="masthead clearfix" id="Passavinti">
+$(document).ready(function() {
+  // navigation click actions 
+  $('#navbar-scroll').on('click', function(event){
+    event.preventDefault();
+    var sectionID = $(this).attr("data-id");
+    scrollToID('#' + sectionID, 750);
+  });
+  // scroll to top action
+  $('.scroll-top').on('click', function(event) {
+    event.preventDefault();
+    $('html, body').animate({scrollTop:0}, 'slow');     
+  });
+
+});
+// scroll function
+function scrollToID(id, speed){
+  var offSet = 50;
+  var targetOffset = $(id).offset().top - offSet;
+  var mainNav = $('#navbar-scroll');
+  $('html,body').animate({scrollTop:targetOffset}, speed);
+  if (mainNav.hasClass("open")) {
+    mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+    mainNav.removeClass("open");
+  }
+}
+if (typeof console === "undefined") {
+    console = {
+        log: function() { }
+    };
+}
+</script>
+<script type="text/javascript">
+$('img-responsive').hover((function(){
+  $('key-img').src=$('img-responsive')
+})();)
+</script>
+
+<script type="text/javascript">
+  window.onload = function() {
+    //[1] 포토 목록에 작은 이미지를 클릭했을때 큰이미지로 변경
+
+    //클릭이벤트를 등록하기 위해 포토 목록에 9개의 <a>요소를 모두 선택
+    var list_zone = document.getElementById("inner_list");
+    var list_a = list_zone.getElementsByTagName("a");
+
+    //포토 리스트의 모든 <a>에 클릭 이벤트를 등록하기 위해서 반복문을 이용하여 등록
+    for(var i=0; i<list_a.length; i++) {
+        list_a[i].onclick=function(){
+            var ph=document.getElementById("photo").children[0];
+            ph.src = this.href;
+            return false; //<a>요소를 클릭했을때 링크가 되지 않도록 함.
+        }
+    }
+}
+</script> 
+</head>
+
+<body data-spy="scroll" data-target="#navbar-scroll">
+           <div class="masthead clearfix">
             <div class="inner">
-              <div class="masthead-navbar"  id="navbar-scroll">
+              <div class="masthead-navbar" id="navbar-scroll">
                 <ul class="nav masthead-nav" role="tablist">
-                  <li class="active"><a href="#Passavinti">Passavinti</a></li>
-                 <li><a href="#Brand">ブランド</a></li>
-                <li><a href="#Products">商品</a></li>  
-                 
-                 <!--   <li><a href="#componsable">Componsable</a></li>
-                     <li><a href="#componsable">Push In</a></li>
-                      <li><a href="#componsable">Jewels</a></li>
-                     -->
-                  <li><a href="#Contact">問い合わせ</a></li>
+
+<li class="active"><a class="scroll-top" href="#Passavinti" data-id="Passavinti"> Passavinti </a></li>
+
+<li><a class="scroll-link" data-id="Brand" href="#Brand"> ブランド </a></li>
+
+<li class="dropdown-submenu"><a tabindex="-1" data-id="Product" href="#Product" id="nav-toggle" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> 商品 </a>
+<ul class="dropdown-menu">
+<li><a class="scroll-link" data-id="silver" href="#silver">Silver</a></li>
+<li><a class="scroll-link" data-id="bronze" href="#bronze">Bronze</a></li>
+<li><a class="scroll-link" data-id="men" href="#men">Men</a></li>
+                   </ul>
+</li>
+<li><a class="scroll-link" data-id="Contact" href="#Contact">問い合わせ</a></li>
                 </ul>
               </div>
             </div>
           </div>
+<div class="brand hidden-xs" id="Passavinti"><img src="img/passavinti-header-w-s.png"></div>
+<img src="img/brandscroll.gif" style="width:100%; margin-bottom:20px; height:auto; border-radius: 15">
 
-    <div class="container-fluid col-sm-12 col-lg-12 col-xs-12">
-              <img id="bg01" class="bg">
-    </div>
 
     <div class="site-wrapper" id="Brand">
-      <div class="site-wrapper-inner">
+    <div class="site-wrapper-inner">
+                <div class="inner" style="text-align:left"> 
       <div class="title">
       <blockquote>
-      <p><h2>ブランド Passavinti</h2></p>
+      <p><h3>ブランド</h3></p>
       </blockquote>
       </div>
-          <img id="pgimg" src="img/brand1.jpg">
-          <img id="pgimg" src="img/brand2.jpg">
-          <img id="pgimg" src="img/brand3.jpg">
-          <img id="pgimg" src="img/brand4.jpg">
-          <img id="pgimg" src="img/brand5.jpg">
-      </div>
+
+    <div class="well">
+            <br />
+      <br />
+            <br />
+      <br />
+            <br />
+       <br />
+              <br />
+
+                                    <h4>Brand</h4><br>
+                                    Passavinti is a historic Florentine jewelry detected by the Reali srl in 2011. Founded in 1970 by the skillful goldsmith Roman Passavinti, the brand is now the result of the restyling of three young entrepreneurs who are looking for a constant quality work in line with the innovative spirit that has always characterized the master Passavinti.<br>
+                                    <br>
+                                    Passavintiは、2011年、貴族たちによって発見された歴史的なフィレンツェの宝石で、1970年に熟練したすぐ工事のRoman Passaviniによって建てられました。マスターPassavintiの革新的な精神にふさわしいクオリティの作品を探していた三人の若い起業家たちが成し遂げたスタイルの再解釈の結果が現在のPassavintiです。<br>
+                                    <br>
+                                    <h4>Passavinti Silver</h4><br>
+                                    All jewelry Passavinti are the result of careful design and careful research in precision manufacturing. The decision to treat the silver in the manner of the ancient tradition of Italian gold jewelry mean that Passavinti become a creative act in which flows a centuries-old wisdom.<br>
+                                    <br>
+                                    
+                                    Passavintiシルバーラインは、精密細工の慎重な設計作業と徹底した調査の結果です。古代イタリアの金細工の伝統の方法を固守し、はを細工してきた決意は、パサアが何百年もされている知恵が内在された創造的な芸術であることを意味します。<br>
+                                    <br>
+
+                                    <h4>Passavinti Bronze</h4>
+                                    <br>
+                                    All creations Passavinti Bronze are strictly made in Italy and are the result of exclusive attention to design, shapes and quality materials. An innovative and dynamic type of clothing suitable for both eveningwear to work.
+                                    <br>
+                                    <br>
+                                    Passavintiブロンズラインはイタリアでのみ製造されデザイン、形状、および材料の質に対する深い関心の結果です。それぞれのジュエリーは、それ自体でイタリア最高の金細工の学校の基準に適合し、新しい独創的な材料を中心に、ファッショントレンドに敏感なデザインチームの経験と創造性を含んでいます。
+                                    <br>
+
+                    </div><!-- well close-->
+                    </div><!--inner close-->
+                      </div>
     </div>
+
+
 
     <div class="site-wrapper" id="Products">
       <div class="site-wrapper-inner">
+                      <div class="inner" style="text-align:left"> 
       <div class="title">
       <blockquote>
-      <p><h2>商品</h2></p>
+      <p><h3>商品</h3></p>
       </blockquote>
       </div>
-<table>
-<br>
-        <div class="cover-container" id="componsable">
-          <div class="inner cover">
-            <h2 class="cover-heading">Componsable</h2>
-            <p class="lead">・ Beads, Charms, Stoppers, Bases</p>
-          </div>
-        </div>
-</br>
-<br>
-       <div class="container-fluid col-sm-12 col-lg-12 col-xs-12"><img id="pgimg" src="img/co.jpg"></div>
-</br>
-<br>        
-        <div class="cover-container" id="pushin">
-          <div class="inner cover">
-            <h2 class="cover-heading">Push In</h2>
-            <p class="lead">・ Chunks, Bases</p>
-          </div>
-        </div>
-</br>
-<br>
-       <div class="container-fluid col-sm-12 col-lg-12 col-xs-12"><img id="pgimg" src="img/pi.jpg"></div>
+  <div class="well">
+        <br />
+      <br />
+            <br />
+      <br />
+            <br />
+       <br />
+<div id="silver" class="container-fluid">
+    <h3 class="sub-header">Silver</h3>
+    </div>
+<table class="table-striped gallery-table table-responsive">
+              <tr>
+              <a href="cathedrale.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+               <div><p class="rollovertitle-silver" >Cathedrale</p></div><img id="gallery-pics" src="img/cathedrale.jpg" alt="Cathedrale">
+               <br />
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>             
+                <tr>
+                <a href="daisy.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-silver">Daisy</p></div>
+                  <img id="gallery-pics" src="img/daisy.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </a>
+                </tr>
+                <tr>
+                <a data-toggle="modal">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-silver">Galaxy</p></div>
+                  <img id="gallery-pics" src="img/galaxy.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </a>
+                </tr>
+                <tr>
+                <a href="infinito.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-silver">Infinito</p></div>  <img id="gallery-pics" src="img/infinito.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>
+                <tr>
+                <a href="luxury.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-silver">Luxury</p></div>  <img id="gallery-pics" src="img/luxury.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>
+                <tr>
+                <a href="riflessi.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                 <div><p class="rollovertitle-silver">Riflessi</p></div> <img id="gallery-pics" src="img/riflessi.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>
+                <tr>
+                <a href="romantica.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                 <div><p class="rollovertitle-silver">Romantica</p></div> <img id="gallery-pics" src="img/romantica.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>
+                <tr>
+                <a href="prestige.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                 <div><p class="rollovertitle-silver">Prestige</p></div> <img id="gallery-pics" src="img/prestige.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>
+                <tr>
+                <a href="arazzo.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                  <div><p class="rollovertitle-silver">Arazzo</p></div><img id="gallery-pics" src="img/arazzo.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </a>
+                </tr>
+                   </table>
 
-</br>
-<br>
-        <div class="cover-container" id="jewels">
-          <div class="inner cover">
-            <h2 class="cover-heading">Jewels</h2>
-            <p class="lead">・ Military, Pirate</p>
-          </div>
-        </div>
-
-       <div class="container-fluid col-sm-12 col-lg-12 col-xs-12"><img id="pgimg" src="img/pu.jpg"></div>
-</br>
-</table>
+  <div id="bronze">
+    <h3 class="sub-header">Bronze</h3>
+    </div>
+                   <table class="table-striped gallery-table table-responsive">
+                <tr>
+                <a href="armonia.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Armonia</p></div> 
+                  <img id="gallery-pics" src="img/armonia.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </tr>             
+                <tr>
+                <a href="elementi.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Elementi</p></div> 
+                  <img id="gallery-pics" src="img/elementi.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </tr>
+                <tr>
+                <a href="forme.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Forme</p></div> 
+                  <img id="gallery-pics" src="img/forme.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </tr>
+                <tr>
+                <a href="movimenti.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Movimenti</p></div> 
+                  <img id="gallery-pics" src="img/movimenti.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </tr>
+                <tr>
+                <a href="trame.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Trame</p></div> 
+                  <img id="gallery-pics" src="img/trame.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </tr>
+                <tr>
+                <a href="mosaici.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Mosaici</p></div> 
+                  <img id="gallery-pics" src="img/mosaici.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </tr>
+                <tr>
+                <a href="tartan.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Tartan</p></div> 
+                  <img id="gallery-pics" src="img/tartan.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </tr>
+                <tr>
+                <a href="capri.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-bronze">Capri</p></div> 
+                  <img id="gallery-pics" src="img/capri.jpg" alt="responsive image">           
+                </div><!--table-responsive-->
+                </a>
+                </tr>
+                   </table>
+ 
+  <div id="men">
+  <h3 class="sub-header">Men</h3>
+  </div>
+                   <table id="men" class="table-striped gallery-table table-responsive">
+                <tr>
+                <a href="firenze.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-men">Firenze</p></div> 
+                  <img id="gallery-pics" src="img/firenze.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </tr>             
+                <tr>
+                <a href="tartan-men.html">
+                <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
+                <div><p class="rollovertitle-men">Tartan</p></div> 
+                  <img id="gallery-pics" src="img/tartan-men.jpg" alt="responsive image">
+                                  </div><!--table-responsive-->
+                                  </a>
+                </tr>
+                   </table>
+                   
+                   </div><!--well close-->
       </div>
     </div>
-
-    <div class="container-fluid col-sm-12 col-lg-12 col-xs-12">
-    <div id="bg02" class="bg">
-    </div></div>
+    </div>
 
         <div class="site-wrapper" id="Contact">
       <div class="site-wrapper-inner">
       <div class="title">      
       <blockquote>
-      <p><h2>問い合わせ</h2></p>
+      <p><h3>問い合わせ</h3></p>
       </blockquote>
 
       <ul class="link-btn">
-              <a href="http://Passavinti.it" class="btn btn-md btn-default">Passavinti イタリア</a>
+              <a href="http://passavinti.it" class="btn btn-md btn-default">Passavinti イタリア</a>
               <br>
-              <a href="http://Passavinti.net
+              <a href="http://passavinti.co.kr
               " class="btn btn-md btn-default">Passavinti 韓国</a>
               </br>
       </ul>
@@ -165,28 +393,28 @@
 
         <div class="cover-container">
           <div class="inner cover">              
-<br></br>
+
 <form id="form1" name="form1" class="contact-form" method="post">
-<div class="form-group col-xs-12 col-sm-12 col-mid-12
+<div class="form-group col-xs-12 col-sm-42 col-mid-12
 ">
 <input type="hidden" name="mode" value="send">
 </div>
-  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+  <div class="form-group col-xs-12 col-sm-4 col-mid-6">
     <label for="name"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 姓名 </label>
     <input type="text" class="form-control" id="name" name="name" aria-required="true" placeholder="name">
   </div>
 
-  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+  <div class="form-group col-xs-12 col-sm-4 col-mid-6">
     <label for="areaname"><span class="glyphicon glyphicon-globe" aria-hidden="true"></span> 地域 </label>
     <input type="text" class="form-control" id="areaname" name="areaname" aria-required="true" placeholder="areaname">
   </div>
 
-  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+  <div class="form-group col-xs-12 col-sm-4 col-mid-6">
     <label for="email"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> E-mail </label>
     <input type="email" class="form-control" id="email" name="email" aria-required="true" placeholder="email">
   </div>
 
-  <div class="form-group col-xs-12 col-sm-6 col-mid-6">
+  <div class="form-group col-xs-12 col-sm-4 col-mid-6 col-lg-6">
     <label for="questype"><span class="glyphicon glyphicon-check" aria-hidden="true"></span> 問い合わせタイップ </label>
 <br>
     <input type="radio" name="questype" class="radio-inline" id="questype" aria-required="true" placeholder="questype" value="Product"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> 商品 
@@ -215,12 +443,12 @@
   </div>
 
 </form>
-
-        </div>
       </div>
+
+    </div>
     </div>
 
-         <div class="mastfoot">
+         <div class="mastfoot hidden-xs hidden-sm">
 
             <div class="inner">
               <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>

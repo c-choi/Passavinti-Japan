@@ -127,7 +127,7 @@ function form_Check(){
 
 	//Ajax Send Start
 	$('#submit').hide();
-	$('#result').html("<img src='indicator.gif' align='absmiddle'> <font color='blue'>전송중입니다. 잠시 기다려주세요.</font>");
+	$('#result').html("<img src='indicator.gif' align='absmiddle'> <font color='blue'>Sending. Please Wait...</font>");
 	var form = $("form")[0];
 	var formData = new FormData(form);
 	$.ajax({
@@ -143,7 +143,7 @@ function form_Check(){
 			//$('#submit').show();
 		},
 		error: function(args) {
-			$('#result').html("<font color='red'>폼메일 발송 실패</font>");
+			$('#result').html("<font color='red'>Form Mail Failed</font>");
 			$('#form1').trigger("reset");
 			//$('#submit').show();
 		},

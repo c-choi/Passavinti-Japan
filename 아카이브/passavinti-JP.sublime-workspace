@@ -1,0 +1,295 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"hei",
+				"height"
+			],
+			[
+				"width",
+				"max-width"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"left",
+				"border-left"
+			],
+			[
+				"back",
+				"background-position"
+			],
+			[
+				"bac",
+				"background-size"
+			],
+			[
+				"repea",
+				"background-repeat"
+			],
+			[
+				"first",
+				"firstChild	Node"
+			],
+			[
+				"getE",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"gete",
+				"getElementsByTagName(${0:name})	Element"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"opacity",
+				"opacity = '$0'	Style CSS"
+			],
+			[
+				"active",
+				"activeElement	Document"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"alert",
+				"alert(${0:message})	Window"
+			],
+			[
+				"ALERT",
+				"alert(${0:message})	Window"
+			],
+			[
+				"aler",
+				"alert(${0:message})	Window"
+			],
+			[
+				"getele",
+				"getElementById(${0:id})	Element"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 27.0,
+		"selected_items":
+		[
+			[
+				"pci",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"PCI",
+				"Package Control: Install Package"
+			],
+			[
+				"PCR",
+				"Package Control: Remove Package"
+			],
+			[
+				"PCL",
+				"Package Control: List Packages"
+			],
+			[
+				"pic",
+				"Package Control: Install Package"
+			],
+			[
+				"pci	",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"/Applications/Sublime\\ Text\\ 2.app/Contents/SharedSupport/bin/subl -n $@"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/Passavinti.html",
+		"/Applications/MAMP/htdocs/facebook.html",
+		"/Applications/MAMP/htdocs/style.css",
+		"/Applications/MAMP/htdocs/Passavinti-products.html",
+		"/Applications/MAMP/htdocs/Passavinti-JP.html",
+		"/Applications/MAMP/htdocs/Passavinti-aboutus.html",
+		"/Applications/MAMP/htdocs/Passavinti-products",
+		"/Applications/MAMP/htdocs/Passavinti-JP.sublime-project",
+		"/Applications/MAMP/htdocs/Passavinti-Japan/Passavinti-JP.html",
+		"/Applications/MAMP/htdocs/wordpress/wp-config.php",
+		"/Users/cloudy/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings",
+		"/Users/cloudy/Desktop/Passavinti-Japan/Passavinti-JP.html",
+		"/Users/cloudy/Desktop/HomePage/Html",
+		"/Users/cloudy/Desktop/HomePage/js/script.js",
+		"/private/var/folders/nj/pgxl2q957rxdd5gsy100r_v00000gn/T/TemporaryItems/Repair Result to 2015, Estimated income statement (Eng) 07478.xml",
+		"/Users/cloudy/Desktop/HomePage/Jquery.html",
+		"/Users/cloudy/Desktop/HomePage/twitter.html",
+		"/Users/cloudy/Desktop/HomePage/bootstrap-3.3.1-dist/dist/css/Bootstrap",
+		"/Users/cloudy/Desktop/HomePage/JS_function.html",
+		"/Users/cloudy/Desktop/HomePage/JS_password.html",
+		"/Users/cloudy/Desktop/HomePage/JS_variable.html",
+		"/Users/cloudy/Desktop/HomePage/JS_setattribute.html",
+		"/Users/cloudy/Desktop/HomePage/JS_getElementByld.html",
+		"/Users/cloudy/Desktop/HomePage/js_alert.html"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"span",
+			"200px",
+			"</li>",
+			"<li>",
+			"li",
+			"JavaScript란",
+			"    </",
+			">\n",
+			"ul",
+			"li"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"project": "Passavinti-JP.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

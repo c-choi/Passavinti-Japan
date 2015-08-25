@@ -1,0 +1,237 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//Ja"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Passavinti Japan</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.3.1-dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+$('#container').imagesLoaded( function() {
+  // images have loaded
+});
+$('#container').imagesLoaded()
+  .always( function( instance ) {
+    console.log('all images loaded');
+  })
+  .done( function( instance ) {
+    console.log('all images successfully loaded');
+  })
+  .fail( function() {
+    console.log('all images loaded, at least one is broken');
+  })
+  .progress( function( instance, image ) {
+    var result = image.isLoaded ? 'loaded' : 'broken';
+    console.log( 'image is ' + result + ' for ' + image.img.src );
+  });
+</script>
+
+
+<style type="text/css" media="screen"></style>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header id="header-menu">
+<div id="menu">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"><img src="images/passavinti-header-white.png" style="height:100%"></a>
+    </div><!--navbar-header close-->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li ><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+        <li ><a href="passavinti-aboutus.html">The Brand <span class="sr-only">(current)</span></a></li>
+    <li class="dropdown active">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Products <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+           <li><a href="passavinti-masonry.html">Products</a></li>
+            <li><a href="products/silver.html">Silver</a></li>
+            <li><a href="products/bronze.html">Bronze</a></li>
+            <li class="divider"></li>
+            <li><a href="products/men.html">Men</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Global <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="http://www.passavinti.it">Passavinti Italy</a></li>
+            <li class="divider"></li>
+            <li><a href="http://www.passavinti.co.kr/index.html">Passavinti Korea</a></li>
+            <li><a href="passavinti-jp.html">Passavinti Japan</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+  </nav>       
+ </div><!-- menu close -->
+ </header><!-- /header -->
+<div class="container-fluid" style="margin-top: 70px">
+  <section class="container-inner" style="margin-left:5%; margin-right:2%;padding-left:3%; padding-right:1%;">
+       
+<section id="container" class="js-masonry" style="width:100%;">
+
+<div class="item" id="color-brick" style="background-color:green"></div>
+<div class="item" id="color-brickh" style="background-color:blue" ></div>
+<div class="item masonry-brick"><img src="images/cathedrale.jpg"></div>
+<div class="item" id="color-brick" style="background-color:greenyellow" ></div>
+<div class="item w5 masonry-brickh"><img src="images/items/cathedrale/cath1.jpg"></div>
+<div class="item" id="color-brick" style="background-color:purple"></div>
+<div class="item w4 masonry-brick"><img src="images/items/cathedrale/cath2.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:Blue"></div>
+<div class="item masonry-brick" ><img src="images/items/cathedrale/cath3.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:hotpink" ></div>  
+<div class="item masonry-brick" ><img src="images/daisy.jpg"></div>
+<div class="item" id="color-brick" style="background-color:green"></div>
+<div class="item" id="color-brick" style="background-color:darkcyan" ></div>
+<div class="item w2 masonry-brickh"><img src="images/items/daisy/dai1.jpg"></div>
+<div class="item" id="color-brick" style="background-color:rosybrown"></div>
+<div class="item w4 masonry-brick"><img src="images/items/daisy/dai2.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:SpringGreen" ></div> 
+<div class="item w5 masonry-brick"><img src="images/items/daisy/dai3.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:darkred"></div>
+<div class="item w3 masonry-brick" ><img src="images/galaxy.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:red" ></div>
+<div class="item w4 masonry-brick" >  <img src="images/items/galaxy/gal1.jpg"></div>
+<div class="item" id="color-brick" style="background-color:yellow"></div>
+<div class="item w5 masonry-brickh" ><img src="images/items/galaxy/gal2.jpg"></div>
+<div class="item" id="color-brick" style="background-color:red" ></div>
+<div class="item" id="color-brickh" style="background-color:blue" ></div>
+<div class="item w2 masonry-brick" ><img src="images/items/galaxy/gal3.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:hotpink" ></div>  
+<div class="item w3 masonry-brick" ><img src="images/infinito.jpg"></div>
+<div class="item" id="color-brick" style="background-color:rosybrown"></div>
+<div class="item" id="color-brickh" style="background-color:blue" ></div>
+<div class="item w2 masonry-brick" ><img src="images/items/infinito/infi1.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:Chocolate"></div>
+<div class="item w4 masonry-brick"><img src="images/items/infinito/infi2.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:darkred"></div>
+<div class="item w5 masonry-brick"><img src="images/items/infinito/infi3.jpg"></div>
+<div class="item" id="color-brick" style="background-color:yellow"></div>
+<div class="item masonry-brick" ><img src="images/luxury.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:fuchsia"></div>
+<div class="item w4 masonry-brick" ><img src="images/items/luxury/lux1.jpg"></div>
+<div class="item" id="color-brick" style="background-color:rosybrown"></div>
+<div class="item w5 masonry-brickh" ><img src="images/items/luxury/lux2.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:lime" ></div>
+<div class="item w2 masonry-brick" ><img src="images/items/luxury/lux3.jpg"></div>
+<div class="item" id="color-brick" style="background-color:pink"></div>
+<div class="item w5 masonry-brick"><img src="images/riflessi.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:red" ></div>
+<div class="item w3 masonry-brick"><img src="images/items/riflessi/rif1.jpg"></div>
+<div class="item" id="color-brick" style="background-color:blue" ></div>
+<div class="item w5 masonry-brickh" ><img src="images/items/riflessi/rif2.jpg"></div>
+<div class="item" id="color-brick" style="background-color:maroon"></div>
+<div class="item w4 masonry-brick" ><img src="images/items/riflessi/rif3.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:darkcyan" ></div>
+<div class="item w2 masonry-brick" ><img src="images/romantica.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:navy"></div>
+<div class="item w4 masonry-brick" ><img src="images/items/romantica/rom1.jpg"></div>
+<div class="item" id="color-brick" style="background-color:turquoise"></div>                     
+<div class="item w5 masonry-brick" ><img src="images/items/romantica/rom2.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:cyan"></div>  
+<div class="item" id="color-brickh" style="background-color:lime" ></div>
+<div class="item w3 masonry-brick" ><img src="images/items/romantica/rom3.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:hotpink" ></div>  
+<div class="item" id="color-brick" style="background-color:orangered"></div>
+<div class="item w2 masonry-brick" ><img src="images/prestige.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:purple"></div>
+<div class="item w2 masonry-brick" ><img src="images/items/prestige/pre1.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:darkred"></div>
+<div class="item masonry-brick" ><img src="images/items/prestige/pre2.jpg"></div>
+<div class="item" id="color-brick" style="background-color:orangered"></div>
+<div class="item w5 masonry-brickh" ><img src="images/items/prestige/pre3.jpg"></div>              
+<div class="item" id="color-brickh" style="background-color:navy"></div>
+<div class="item w4 masonry-brick" ><img src="images/arazzo.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:lime" ></div>
+<div class="item" id="color-brickh" style="background-color:purple"></div>
+<div class="item w5 masonry-brick" ><img src="images/items/arazzo/ar1.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:pink"></div>  
+<div class="item w4 masonry-brick" ><img src="images/items/arazzo/ar2.jpg"></div>
+<div class="item" id="color-brick" style="background-color:royalblue"></div>  
+<div class="item w2 masonry-brick" ><img src="images/items/arazzo/ar3.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:red"></div>  
+<div class="item masonry-brick"><img src="images/armonia.jpg"></div>
+<div class="item" id="color-brick" style="background-color:cyan"></div>  
+<div class="item w3 masonry-brick" ><img src="images/elementi.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:Blue"></div>
+<div class="item masonry-brick"><img src="images/forme.jpg"></div>
+<div class="item" id="color-brick" style="background-color:red"></div>  
+<div class="item" id="color-brickh" style="background-color:purple"></div>
+<div class="item w3 masonry-brick" ><img src="images/movimenti.jpg"></div>
+<div class="item" id="color-brick" style="background-color:Chocolate"></div>
+<div class="item" id="color-brickh" style="background-color:purple"></div>
+<div class="item masonry-brick" ><img src="images/trame.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:purple"></div>
+<div class="item w4 masonry-brick" ><img src="images/mosaici.jpg"></div>
+<div class="item" id="color-brick" style="background-color:turquoise"></div>   
+<div class="item w3 masonry-brick" ><img src="images/tartan.jpg"></div>              
+<div class="item" id="color-brickh" style="background-color:purple"></div>
+<div class="item w3 masonry-brick" ><img src="images/capri.jpg"></div>
+<div class="item" id="color-brick" style="background-color:red"></div>  
+<div class="item w4 masonry-brick" ><img src="images/firenze.jpg"></div>
+<div class="item" id="color-brickh" style="background-color:SpringGreen" ></div> 
+<div class="item w4 masonry-brick " ><img src="images/tartan-men.jpg"></div>
+<div class="item" id="color-brick" style="background-color:green"></div>  
+
+</section> <!--masonry container -->
+
+</section><!-- container-inner close-->
+ <center><a href="#top"><button type="button" class="btn btn-default"><strong style="color: black">Top</strong></button></a></center>
+</div><!-- container close -->
+
+      <div id="footer">
+    <ol class="breadcrumb">
+      
+        <li><a href="index.html">Home</a></li>
+      <li><a href="passavinti-aboutus.html">Brand</a></li>
+      <li class="active">Products</li>
+        <li><button type="button" class="btn-btn-default" aria-label="Mail" herf="mailto:c-choi@wise-ltd.net">
+            <span class="glyphicon glyphicon-envelope" aria-hidden="true" style="text-align:center"></span>
+            </button></li>
+    </ol>
+        <div class="container-fluid" style="text-align:right; vertical-align:text-bottom; margin-right:5%;"> 
+          <img id="firenze" src="images/firenze-1970.png">
+          <address id="Copyright">Copyright （ｃ）<strong>Wise Design</strong>  All Rights Reserved.</address>
+                 </div><!-- container-fluid close -->
+             </div> <!-- footer close -->
+
+   
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.1-dist/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js"></script>
+    <script src="bootstrap-3.3.1-dist/dist/js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="bootstrap-3.3.1-dist/dist/js/masonry.pkgd.min.js">
+</script> 
+</body>
+</html>
