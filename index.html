@@ -85,30 +85,13 @@ if (typeof console === "undefined") {
     };
 }
 </script>
-<script type="text/javascript">
+<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js">
 $('img-responsive').hover((function(){
   $('key-img').src=$('img-responsive')
 })();)
 </script>
 
-<script type="text/javascript">
-  window.onload = function() {
-    //[1] 포토 목록에 작은 이미지를 클릭했을때 큰이미지로 변경
 
-    //클릭이벤트를 등록하기 위해 포토 목록에 9개의 <a>요소를 모두 선택
-    var list_zone = document.getElementById("inner_list");
-    var list_a = list_zone.getElementsByTagName("a");
-
-    //포토 리스트의 모든 <a>에 클릭 이벤트를 등록하기 위해서 반복문을 이용하여 등록
-    for(var i=0; i<list_a.length; i++) {
-        list_a[i].onclick=function(){
-            var ph=document.getElementById("photo").children[0];
-            ph.src = this.href;
-            return false; //<a>요소를 클릭했을때 링크가 되지 않도록 함.
-        }
-    }
-}
-</script> 
 </head>
 
 <body data-spy="scroll" data-target="#navbar-scroll">
@@ -133,6 +116,8 @@ $('img-responsive').hover((function(){
               </div>
             </div>
           </div>
+
+
 <div class="brand hidden-xs" id="Passavinti"><img src="img/passavinti-header-w-s.png"></div>
 <img src="img/brandscroll.gif" style="width:100%; margin-bottom:20px; height:auto; border-radius: 15">
 
@@ -178,7 +163,6 @@ $('img-responsive').hover((function(){
                       </div>
     </div>
 
-
     <div class="site-wrapper" id="Products">
       <div class="site-wrapper-inner">
                       <div class="inner" style="text-align:left"> 
@@ -199,7 +183,7 @@ $('img-responsive').hover((function(){
     </div>
 <table class="table-striped gallery-table table-responsive">
               <tr>
-              <a href="cathedrale.html">
+              <a href="products/cathedrale.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                <div><p class="rollovertitle-silver" >Cathedrale</p></div><img id="gallery-pics" src="img/cathedrale.jpg" alt="Cathedrale">
                <br />
@@ -208,7 +192,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>             
                 <tr>
-                <a href="daisy.html">
+                <a href="products/daisy.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-silver">Daisy</p></div>
                   <img id="gallery-pics" src="img/daisy.jpg" alt="responsive image">
@@ -217,7 +201,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a data-toggle="modal">
+                <a href="products/galaxy.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-silver">Galaxy</p></div>
                   <img id="gallery-pics" src="img/galaxy.jpg" alt="responsive image">
@@ -226,7 +210,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="infinito.html">
+                <a href="products/infinito.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-silver">Infinito</p></div>  <img id="gallery-pics" src="img/infinito.jpg" alt="responsive image">           
                 </div><!--table-responsive-->
@@ -234,7 +218,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="luxury.html">
+                <a href="products/luxury.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-silver">Luxury</p></div>  <img id="gallery-pics" src="img/luxury.jpg" alt="responsive image">           
                 </div><!--table-responsive-->
@@ -242,7 +226,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="riflessi.html">
+                <a href="products/riflessi.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                  <div><p class="rollovertitle-silver">Riflessi</p></div> <img id="gallery-pics" src="img/riflessi.jpg" alt="responsive image">           
                 </div><!--table-responsive-->
@@ -250,7 +234,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="romantica.html">
+                <a href="products/romantica.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                  <div><p class="rollovertitle-silver">Romantica</p></div> <img id="gallery-pics" src="img/romantica.jpg" alt="responsive image">           
                 </div><!--table-responsive-->
@@ -258,7 +242,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="prestige.html">
+                <a href="products/prestige.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                  <div><p class="rollovertitle-silver">Prestige</p></div> <img id="gallery-pics" src="img/prestige.jpg" alt="responsive image">           
                 </div><!--table-responsive-->
@@ -266,7 +250,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="arazzo.html">
+                <a href="products/arazzo.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                   <div><p class="rollovertitle-silver">Arazzo</p></div><img id="gallery-pics" src="img/arazzo.jpg" alt="responsive image">           
                 </div><!--table-responsive-->
@@ -280,7 +264,7 @@ $('img-responsive').hover((function(){
     </div>
                    <table class="table-striped gallery-table table-responsive">
                 <tr>
-                <a href="armonia.html">
+                <a href="products/armonia.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Armonia</p></div> 
                   <img id="gallery-pics" src="img/armonia.jpg" alt="responsive image">
@@ -288,7 +272,7 @@ $('img-responsive').hover((function(){
                                   </a>
                 </tr>             
                 <tr>
-                <a href="elementi.html">
+                <a href="products/elementi.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Elementi</p></div> 
                   <img id="gallery-pics" src="img/elementi.jpg" alt="responsive image">
@@ -296,7 +280,7 @@ $('img-responsive').hover((function(){
                                   </a>
                 </tr>
                 <tr>
-                <a href="forme.html">
+                <a href="products/forme.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Forme</p></div> 
                   <img id="gallery-pics" src="img/forme.jpg" alt="responsive image">
@@ -304,7 +288,7 @@ $('img-responsive').hover((function(){
                                   </a>
                 </tr>
                 <tr>
-                <a href="movimenti.html">
+                <a href="products/movimenti.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Movimenti</p></div> 
                   <img id="gallery-pics" src="img/movimenti.jpg" alt="responsive image">           
@@ -312,7 +296,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="trame.html">
+                <a href="products/trame.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Trame</p></div> 
                   <img id="gallery-pics" src="img/trame.jpg" alt="responsive image">           
@@ -320,7 +304,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="mosaici.html">
+                <a href="products/mosaici.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Mosaici</p></div> 
                   <img id="gallery-pics" src="img/mosaici.jpg" alt="responsive image">           
@@ -328,7 +312,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="tartan.html">
+                <a href="products/tartan.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Tartan</p></div> 
                   <img id="gallery-pics" src="img/tartan.jpg" alt="responsive image">           
@@ -336,7 +320,7 @@ $('img-responsive').hover((function(){
                 </a>
                 </tr>
                 <tr>
-                <a href="capri.html">
+                <a href="products/capri.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-bronze">Capri</p></div> 
                   <img id="gallery-pics" src="img/capri.jpg" alt="responsive image">           
@@ -350,7 +334,7 @@ $('img-responsive').hover((function(){
   </div>
                    <table id="men" class="table-striped gallery-table table-responsive">
                 <tr>
-                <a href="firenze.html">
+                <a href="products/firenze.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-men">Firenze</p></div> 
                   <img id="gallery-pics" src="img/firenze.jpg" alt="responsive image">
@@ -358,7 +342,7 @@ $('img-responsive').hover((function(){
                                   </a>
                 </tr>             
                 <tr>
-                <a href="tartan-men.html">
+                <a href="products/tartan-men.html">
                 <div id="table-border" class="col-xs-12 col-sm-4 col-md-4 col-lg-4" >
                 <div><p class="rollovertitle-men">Tartan</p></div> 
                   <img id="gallery-pics" src="img/tartan-men.jpg" alt="responsive image">

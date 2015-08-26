@@ -1,7 +1,16 @@
 /*
  * Globals
  */
-
+#products {
+  width:100%;
+  height: 100%;
+}
+.modal-content {
+  height: 90%;
+}
+.modal-body {
+  height:90%;
+}
 /* Links */
 a,
 a:focus,
@@ -207,10 +216,9 @@ body {
  * photo_list
  */
 
-
-    #gallery{
-        width:100%;
-        margin:0px;
+ #gallery{
+ width:100%;
+ margin:3% 3% 3% 3%;
         box-shadow:0 5px 5px rgba(0,0,0,0.3);
 }
 
