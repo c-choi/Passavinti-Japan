@@ -27,7 +27,7 @@ $body2.= "<tr bgcolor='white'><td align='center' height='25'>Content</td><td ali
 $body2.= "</table>";
 
 //$admin_email = "e-mail address";
-$admin_email = "c-choi@wise-ltd.net";
+$admin_email = "s-ikeda@wise-ltd.net";
 
 if($mode == "send") {
 	//Start attachment
